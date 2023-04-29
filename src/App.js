@@ -14,6 +14,9 @@ function App() {
               <li><a href='#' className='pages'>Support</a></li>
             </ul>
           </nav>
+          <div className='Fmessage'>
+            <h1>Immersive experiences that deliver</h1>
+          </div>
       </div>
     </div>
   );
