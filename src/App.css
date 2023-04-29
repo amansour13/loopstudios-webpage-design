@@ -1,0 +1,42 @@
+ *{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+ }
+
+.header{
+  background-image: url(./img/image-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.subHeader{
+  padding: 50px 10vw;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.5;
+}
+
+.active{
+  border-bottom: 1px solid white;
+}
+
+a{
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: white;
+}
