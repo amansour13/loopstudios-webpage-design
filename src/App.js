@@ -1,7 +1,34 @@
 import './App.css';
+import vrImage from './img/image-interactive.jpg';
+
+function VR(){
+  return (
+    <div className='vrSection'>
+      <img src={vrImage} className='vrImg' alt='interactive image'/>
+      <div className='Fmessage2'>
+        <h2>The leader in interactive VR</h2>
+        <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+projects for some of the best companies around the globe. Our award-winning 
+creations have transformed businesses through digital experiences that bind 
+to their brand.</p>
+      </div>
+    </div>
+  );
+}
+
+function MainSection(){
+  return (
+    <div className='main'>
+      <div className='subHeader'>
+        <VR />
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
+    <>
     <div className='header'>
       <div className='subHeader'>
           <nav>
@@ -19,6 +46,8 @@ function App() {
           </div>
       </div>
     </div>
+    <MainSection />
+    </>
   );
 }
 

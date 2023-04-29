@@ -29,7 +29,6 @@ nav{
   width: 50%;
   text-transform: uppercase;
   font-size: 30px;
-  font-weight: lighter;
 }
 ul {
   list-style: none;
@@ -48,4 +47,37 @@ a{
 
 a:hover{
   border-bottom: 1px solid white;
+}
+
+/* main section */
+
+.main .subHeader{
+  padding: 100px 10vw;
+}
+
+.vrSection{
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.vrImg{
+  width: 50vw;
+}
+
+.Fmessage2{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  color: gray;
+  background-color: white;
+  padding: 75px 75px 0px 75px;
+}
+
+.Fmessage2 h2{
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 200;
+  color: rgb(59, 59, 59);
 }
