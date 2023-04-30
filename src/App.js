@@ -1,5 +1,21 @@
 import './App.css';
 import vrImage from './img/image-interactive.jpg';
+import Image1 from './img/image-deep-earth.jpg';
+import Image2 from './img/image-night-arcade.jpg';
+import Image3 from './img/image-soccer-team.jpg';
+import Image4 from './img/image-grid.jpg';
+import Image5 from './img/image-from-above.jpg';
+import Image6 from './img/image-pocket-borealis.jpg';
+import Image7 from './img/image-curiosity.jpg';
+import Image8 from './img/image-fisheye.jpg';
+
+function Card(props) {
+  return (
+    <div className="card" style={{backgroundImage: `url(${props.url})`}}>
+      <h2>{props.txt}</h2>
+    </div>
+  );
+}
 
 function VR(){
   return (
@@ -21,6 +37,22 @@ function MainSection(){
     <div className='main'>
       <div className='subHeader'>
         <VR />
+        <div className='creationTitle'>
+          <h2>Our creations</h2>
+          <button>SEE ALL</button>
+        </div>
+        <div className='creationInfo'>
+            <Card url={Image1} txt='Deep earth'/>
+            <Card url={Image2} txt='Night arcade'/>
+            <Card url={Image3} txt='Soccer team VR'/>
+            <Card url={Image4} txt='The grid'/>
+        </div>
+        <div className='creationInfo'>
+            <Card url={Image5} txt='From up above VR'/>
+            <Card url={Image6} txt='Pocket borealis'/>
+            <Card url={Image7} txt='The curiosity'/>
+            <Card url={Image8} txt='Make it fisheye'/>
+        </div>
       </div>
     </div>
   );

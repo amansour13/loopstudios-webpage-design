@@ -81,3 +81,61 @@ a:hover{
   font-weight: 200;
   color: rgb(59, 59, 59);
 }
+
+/* our creation section */
+
+.creationTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.creationTitle h2{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 200;
+  color: rgb(59, 59, 59);
+}
+
+.creationTitle button{
+  color: black;
+  background: none;
+  border: 1px solid black;
+  padding: 10px;
+  width: 125px;
+  letter-spacing: 2px;
+}
+
+.creationTitle button:hover{
+  color: white;
+  background: black;
+  cursor: pointer;
+}
+
+/* creation info */
+
+.creationInfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card{
+  width: 256px;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  color: rgb(238, 237, 237);
+  position: relative;
+}
+.card h2{
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 70%;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 200;
+} 
