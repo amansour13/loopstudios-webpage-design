@@ -139,3 +139,21 @@ a:hover{
   font-size: 30px;
   font-weight: 200;
 } 
+
+/* footer */
+
+.footer{
+  background-color: black;
+  color: white;
+  padding: 40px 10vw 10px 10vw;
+}
+
+.line{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.line h4{
+  color: gray;
+}

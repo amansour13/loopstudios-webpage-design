@@ -8,6 +8,41 @@ import Image5 from './img/image-from-above.jpg';
 import Image6 from './img/image-pocket-borealis.jpg';
 import Image7 from './img/image-curiosity.jpg';
 import Image8 from './img/image-fisheye.jpg';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faFacebook, faTwitter, faInstagram, faPinterest } from '@fortawesome/free-brands-svg-icons';
+
+// function SocialMediaIcons() {
+//   return (
+//     <div>
+//       <FontAwesomeIcon icon={faFacebook} />
+//       <FontAwesomeIcon icon={faTwitter} />
+//       <FontAwesomeIcon icon={faInstagram} />
+//       <FontAwesomeIcon icon={faPinterest} />
+//     </div>
+//   );
+// }
+
+
+function Footer(){
+  return(
+    <div className='footer'>
+      <div className='line'>
+        <h2>loopstudios</h2>
+        {/* <SocialMediaIcons /> */}
+      </div>
+      <div className='line'>
+        <ul>
+          <li><a href='#' className='pages'>About</a></li>
+          <li><a href='#' className='pages'>Careers</a></li>
+          <li><a href='#' className='pages'>Events</a></li>
+          <li><a href='#' className='pages'>Products</a></li>
+          <li><a href='#' className='pages'>Support</a></li>
+        </ul>
+        <h4>© 2021 Loopstudios. All rights reserved.</h4>
+      </div>
+    </div>
+  );
+}
 
 function Card(props) {
   return (
@@ -79,6 +114,7 @@ function App() {
       </div>
     </div>
     <MainSection />
+    <Footer />
     </>
   );
 }
