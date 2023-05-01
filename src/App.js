@@ -48,7 +48,8 @@ function Footer(){
 
 function Card(props) {
   return (
-    <div className="card" style={{backgroundImage: `url(${props.url})`}}>
+    <div className="card" >
+      <img src={props.url} alt={props.url}/>
       <h2>{props.txt}</h2>
     </div>
   );

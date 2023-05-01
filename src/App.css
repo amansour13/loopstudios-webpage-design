@@ -123,13 +123,14 @@ a:hover{
 }
 
 .card{
-  width: 256px;
-  height: 450px;
-  background-size: cover;
-  background-position: center;
   color: rgb(238, 237, 237);
   position: relative;
 }
+
+.card img{
+  width: 18vw;
+}
+
 .card h2{
   position: absolute;
   bottom: 30px;
@@ -168,5 +169,6 @@ a:hover{
 .icon{
   filter: invert(1);
   width: 32px;
+  cursor: pointer;
 }
 
