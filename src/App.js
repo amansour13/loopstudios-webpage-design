@@ -13,9 +13,19 @@ import tw from './img/twitter.png';
 import pn from './img/pinterest.png';
 import inst from './img/instagram.png';
 
-function SocialMediaIcons() {
+function Humberger(){
+  return(
+    <div class="navbar_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+  );
+}
+
+function SocialMediaIcons(props) {
   return (
-    <div className='socialIcons'>
+    <div className={'socialIcons ' + props.cl}>
       <img src={fb} className='icon'/>
       <img src={tw} className='icon'/>
       <img src={pn} className='icon'/>
@@ -30,7 +40,7 @@ function Footer(){
     <div className='footer'>
       <div className='line'>
         <h2>loopstudios</h2>
-        <SocialMediaIcons />
+        <SocialMediaIcons cl='bef'/>
       </div>
       <div className='line'>
         <ul>
@@ -40,6 +50,7 @@ function Footer(){
           <li><a href='#' className='pages'>Products</a></li>
           <li><a href='#' className='pages'>Support</a></li>
         </ul>
+        <SocialMediaIcons cl='aft'/>
         <h4>© 2021 Loopstudios. All rights reserved.</h4>
       </div>
     </div>
@@ -49,7 +60,7 @@ function Footer(){
 function Card(props) {
   return (
     <div className="card" >
-      <img src={props.url} alt={props.url}/>
+      <img src={props.url} alt={props.url} className={props.cl}/>
       <h2>{props.txt}</h2>
     </div>
   );
@@ -70,6 +81,10 @@ to their brand.</p>
   );
 }
 
+function BtnAfter(){
+  return(<div className='btnDiv'><button className='btn'>See All</button></div>);
+}
+
 function MainSection(){
   return (
     <div className='main'>
@@ -80,8 +95,8 @@ function MainSection(){
           <button>SEE ALL</button>
         </div>
         <div className='creationInfo'>
-            <Card url={Image1} txt='Deep earth'/>
-            <Card url={Image2} txt='Night arcade'/>
+            <Card url={Image1} txt='Deep earth' cl='turn270'/>
+            <Card url={Image2} txt='Night arcade' cl='crop'/>
             <Card url={Image3} txt='Soccer team VR'/>
             <Card url={Image4} txt='The grid'/>
         </div>
@@ -91,6 +106,7 @@ function MainSection(){
             <Card url={Image7} txt='The curiosity'/>
             <Card url={Image8} txt='Make it fisheye'/>
         </div>
+        <BtnAfter />
       </div>
     </div>
   );
@@ -110,9 +126,10 @@ function App() {
               <li><a href='#' className='pages'>Products</a></li>
               <li><a href='#' className='pages'>Support</a></li>
             </ul>
+            <Humberger />
           </nav>
           <div className='Fmessage'>
-            <h1>Immersive experiences that deliver</h1>
+            <h2>Immersive experiences that deliver</h2>
           </div>
       </div>
     </div>

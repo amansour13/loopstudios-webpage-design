@@ -98,7 +98,7 @@ a:hover{
   color: rgb(59, 59, 59);
 }
 
-.creationTitle button{
+.creationTitle button, .btn{
   color: black;
   background: none;
   border: 1px solid black;
@@ -107,10 +107,14 @@ a:hover{
   letter-spacing: 2px;
 }
 
-.creationTitle button:hover{
+.creationTitle button:hover, .btn:hover{
   color: white;
   background: black;
   cursor: pointer;
+}
+
+.btn{
+  display: none;
 }
 
 /* creation info */
@@ -172,3 +176,211 @@ a:hover{
   cursor: pointer;
 }
 
+.aft{
+  display: none;
+}
+
+/* navbar humburger icon */
+.navbar_toggle{
+  display: none;
+}
+
+
+/* mobile responsive */
+@media only screen and (max-width:1080px){
+  .Fmessage{
+    font-size: 20px;
+    font-weight: 100;
+  }
+  .Fmessage2{
+    position: absolute;
+    width: 40%;
+    padding: 50px 50px 0px 50px;
+  }
+
+  .Fmessage2 h2{
+    font-size: 25px;
+  }
+
+  .card h2{
+    bottom: 20px;
+    left: 20px;
+    width: 80%;
+    font-size: 25px;
+    font-weight: 200;
+  } 
+  
+
+  /* footer */
+  .socialIcons{
+    flex: 0.3;
+  }
+  .line ul{
+    flex: 0.7;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar_toggle {
+    display: block;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar_toggle span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    margin: 1vh auto;
+    background-color: white;
+    height: 2px;
+    width: 20px;
+}
+
+.subHeader ul{
+  display: none;
+}
+
+.Fmessage2{
+  position: absolute;
+  width: 50%;
+  padding: 25px 25px 0px 25px;
+}
+
+.Fmessage2 h2{
+  font-size: 20px;
+}
+
+.Fmessage p{
+  font-size: 4px;
+}
+
+.card h2{
+  bottom: 15px;
+  left: 15px;
+  width: 80%;
+  font-size: 20px;
+  font-weight: 200;
+} 
+
+/* footer */
+.socialIcons{
+  flex: 0.2;
+}
+
+.icon{
+  width: 16px;
+}
+
+.line ul{
+  flex: 0.9;
+}
+
+.line h4{
+  font-size: smaller;
+  flex: 0.8;
+  text-align: right;
+}
+}
+
+@media only screen and (max-width: 700px) {
+  .card h2{
+    bottom: 10px;
+    left: 10px;
+    width: 70%;
+    font-size: 15px;
+    font-weight: 100;
+  } 
+}
+
+@media only screen and (max-width: 650px) {
+  .Fmessage{
+    font-size: 15px;
+  }
+  .Fmessage2{
+    position: static;
+    width: 90%;
+    padding: 25px 25px 0px 25px;
+    text-align: center;
+  }
+  .vrSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .vrImg{
+    width: 100%;
+  }
+  .creationTitle button{
+    display: none;
+  }
+  .creationTitle{
+    justify-content: center;
+  }
+  .btn{
+    display: block;
+  }
+  .btnDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card h2{
+    font-size: 10px;
+  }
+
+  .creationInfo{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .turn270{
+    transform: rotate(90deg) scaleX(-1);
+  }
+  .crop{
+    clip: rect(50px 0px 200px 0px);
+  }
+  /* .creationInfo img{
+    width: 100%;
+    transform: rotate(90deg);
+  } */
+
+
+  /* footer */
+  .bef{
+    display: none;
+  }
+  .icon{
+    width: 32px;
+  }
+  .aft{
+    display: flex;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  .line{
+    flex-direction: column;
+    align-items: center;
+  }
+  .line ul{
+    flex-direction: column;
+  }
+  .line ul li{
+    margin-bottom: 30px;
+  }
+
+  .subHeader, .footer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Fmessage{
+    padding: 20px;
+    width: 85%;
+  }
+}
