@@ -8,19 +8,21 @@ import Image5 from './img/image-from-above.jpg';
 import Image6 from './img/image-pocket-borealis.jpg';
 import Image7 from './img/image-curiosity.jpg';
 import Image8 from './img/image-fisheye.jpg';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebook, faTwitter, faInstagram, faPinterest } from '@fortawesome/free-brands-svg-icons';
+import fb from './img/facebook.png';
+import tw from './img/twitter.png';
+import pn from './img/pinterest.png';
+import inst from './img/instagram.png';
 
-// function SocialMediaIcons() {
-//   return (
-//     <div>
-//       <FontAwesomeIcon icon={faFacebook} />
-//       <FontAwesomeIcon icon={faTwitter} />
-//       <FontAwesomeIcon icon={faInstagram} />
-//       <FontAwesomeIcon icon={faPinterest} />
-//     </div>
-//   );
-// }
+function SocialMediaIcons() {
+  return (
+    <div className='socialIcons'>
+      <img src={fb} className='icon'/>
+      <img src={tw} className='icon'/>
+      <img src={pn} className='icon'/>
+      <img src={inst} className='icon'/>
+    </div>
+  );
+}
 
 
 function Footer(){
@@ -28,7 +30,7 @@ function Footer(){
     <div className='footer'>
       <div className='line'>
         <h2>loopstudios</h2>
-        {/* <SocialMediaIcons /> */}
+        <SocialMediaIcons />
       </div>
       <div className='line'>
         <ul>

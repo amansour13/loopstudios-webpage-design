@@ -157,3 +157,16 @@ a:hover{
 .line h4{
   color: gray;
 }
+
+.socialIcons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0.2;
+}
+
+.icon{
+  filter: invert(1);
+  width: 32px;
+}
+
