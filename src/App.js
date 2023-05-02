@@ -8,10 +8,19 @@ import Image5 from './img/image-from-above.jpg';
 import Image6 from './img/image-pocket-borealis.jpg';
 import Image7 from './img/image-curiosity.jpg';
 import Image8 from './img/image-fisheye.jpg';
+import Image1m from './img/mobile/image-deep-earth.jpg';
+import Image2m from './img/mobile/image-night-arcade.jpg';
+import Image3m from './img/mobile/image-soccer-team.jpg';
+import Image4m from './img/mobile/image-grid.jpg';
+import Image5m from './img/mobile/image-from-above.jpg';
+import Image6m from './img/mobile/image-pocket-borealis.jpg';
+import Image7m from './img/mobile/image-curiosity.jpg';
+import Image8m from './img/mobile/image-fisheye.jpg';
 import fb from './img/facebook.png';
 import tw from './img/twitter.png';
 import pn from './img/pinterest.png';
 import inst from './img/instagram.png';
+import { useState, useEffect } from 'react';
 
 function Humberger(){
   return(
@@ -60,7 +69,7 @@ function Footer(){
 function Card(props) {
   return (
     <div className="card" >
-      <img src={props.url} alt={props.url} className={props.cl}/>
+      <img src={props.url} alt={props.url}/>
       <h2>{props.txt}</h2>
     </div>
   );
@@ -86,6 +95,17 @@ function BtnAfter(){
 }
 
 function MainSection(){
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    window.matchMedia('(max-width: 650px)').matches
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 650px)');
+    const handleResize = () => setIsSmallScreen(mediaQuery.matches);
+    mediaQuery.addListener(handleResize);
+    return () => mediaQuery.removeListener(handleResize);
+  }, []);
+
   return (
     <div className='main'>
       <div className='subHeader'>
@@ -95,16 +115,39 @@ function MainSection(){
           <button>SEE ALL</button>
         </div>
         <div className='creationInfo'>
-            <Card url={Image1} txt='Deep earth' cl='turn270'/>
-            <Card url={Image2} txt='Night arcade' cl='crop'/>
-            <Card url={Image3} txt='Soccer team VR'/>
-            <Card url={Image4} txt='The grid'/>
+        {isSmallScreen ? (
+          <>
+            <Card url={Image1m} txt='Deep earth'/>
+            <Card url={Image2m} txt='Night arcade'/>
+            <Card url={Image3m} txt='Soccer team VR'/>
+            <Card url={Image4m} txt='The grid'/>
+          </>
+          ) : (
+            <>
+              <Card url={Image1} txt='Deep earth'/>
+              <Card url={Image2} txt='Night arcade'/>
+              <Card url={Image3} txt='Soccer team VR'/>
+              <Card url={Image4} txt='The grid'/>
+            </>
+          )}
         </div>
         <div className='creationInfo'>
-            <Card url={Image5} txt='From up above VR'/>
-            <Card url={Image6} txt='Pocket borealis'/>
-            <Card url={Image7} txt='The curiosity'/>
-            <Card url={Image8} txt='Make it fisheye'/>
+        {isSmallScreen ? (
+          <>
+            <Card url={Image5m} txt='From up above VR'/>
+            <Card url={Image6m} txt='Pocket borealis'/>
+            <Card url={Image7m} txt='The curiosity'/>
+            <Card url={Image8m} txt='Make it fisheye'/>
+          </>
+          ) : (
+            <>
+              <Card url={Image5} txt='From up above VR'/>
+              <Card url={Image6} txt='Pocket borealis'/>
+              <Card url={Image7} txt='The curiosity'/>
+              <Card url={Image8} txt='Make it fisheye'/>
+            </>
+          )}
+            
         </div>
         <BtnAfter />
       </div>
